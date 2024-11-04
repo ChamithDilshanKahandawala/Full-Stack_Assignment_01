@@ -1,0 +1,392 @@
+*{
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins',sans-serif;
+
+}
+
+
+:root{
+    --bd-color: #081b29;
+    --text-color : aliceblue;
+    --main-color: #00abf0 ;
+    --sec-main-color : #0a2334;
+}
+
+body{
+    color: var(--text-color);
+    background: var(--bd-color);
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    display: flex  ;
+    align-items: center;
+    padding: 0 9%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.about_me{
+    max-width: 60rem;
+    background: transparent;
+}
+.about_me h1{
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.about_me .text_animate{
+    position: relative;
+    width: 32.8rem;
+}
+
+.about_me .text_animate h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.about_me p{
+    font-size: 18px;
+    margin: 12px 0 20px;
+    text-align: justify;
+}
+
+.about_me .btn_box{
+    width: 10.5rem;
+    height: 3.5rem;
+}
+
+.btn_box .btn{
+    position: relative;
+    height: 100%;
+    width: 10rem;
+    background: var(--main-color);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 1px 1px;
+    border: 2px solid var(--main-color);
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    color: #0d0d0e;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.btn_box .btn:hover{
+    color: var(--main-color);
+}
+
+
+.btn_box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn_box .btn:hover::before {
+    width: 100%;
+}
+
+
+.home_soc_Icn{
+    
+    bottom: 2.5rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home_soc_Icn a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--main-color);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.home_soc_Icn a:hover{
+    color:var(--bd-color);
+}
+
+.home_soc_Icn a::before{
+    content: '';
+    position: absolute;
+    background-color:var(--main-color);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+.home_soc_Icn a:hover:before{
+    width: 100%;
+}
+
+
+
+
+
+
+.pro_Pic img{
+    height: 40rem;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.pro_Pic img:hover{
+    color: #081b29;
+}
+
+
+/* My Skills */
+
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--sec-main-color);
+     /* text-align: center;  */
+    
+}
+
+.title{
+    font-size: 3rem;
+    margin-bottom:3rem ;
+    text-align: center;
+}
+
+.skills .skill_row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+     /* display: flex;
+    justify-content:space-between;  */
+}
+
+.skill_row .skill_column{
+    flex:  1 1 40rem;
+}
+
+.skill_column .title{
+    font-size: 2rem;
+    margin: 0 0 1.5rem;
+}
+
+.skill_box .skill_content{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: .5rem 2rem ;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.skill_box .skill_content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bd-color);
+    transition: .5s;
+    z-index: -1;
+}
+
+.skill_box .skill_content:hover::before{
+    width: 100%;
+}
+
+
+.skill_content .progress {
+    padding: 1rem 0;
+}
+
+.skill_content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_content .progress h3 span{
+    color: var(--text-color);
+}
+
+.skill_content .progress .bar {
+    height: 2.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.skill_content .progress .bar span{ 
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+}
+
+/* Percentage View */
+
+.skill_column:nth-child(1) .skill_content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+.skill_column:nth-child(1) .skill_content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+.skill_column:nth-child(1) .skill_content .progress:nth-child(3) .bar span {
+    width: 70%;
+}
+.skill_column:nth-child(1) .skill_content .progress:nth-child(4) .bar span {
+    width: 60%;
+}
+.skill_column:nth-child(1) .skill_content .progress:nth-child(5) .bar span {
+    width: 80%;
+}
+
+.skill_column:nth-child(2) .skill_content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+.skill_column:nth-child(2) .skill_content .progress:nth-child(2) .bar span {
+    width: 70%;
+}
+.skill_column:nth-child(2) .skill_content .progress:nth-child(3) .bar span {
+    width: 80%;
+}
+.skill_column:nth-child(2) .skill_content .progress:nth-child(4) .bar span {
+    width: 90%;
+}
+.skill_column:nth-child(2) .skill_content .progress:nth-child(5) .bar span {
+    width: 90%;
+}
+
+.footer_pg1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right_details{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#footer_btn{
+    height: 80%;
+    margin: 5px 20px;
+    width: 90%;
+}
+.home_soc_Icn {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px;
+}
+
+.header{
+    background: rgb(220, 220, 127);
+    color: #0a2334;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+    
+}
+
+.header h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+
+/*Page 2*/
+
+.Pr_Ach{
+    margin: 20px;
+    padding: 20px;
+
+}
+
+.Pr_Ach h2{
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+.image{
+    padding: 20px 0;
+}
+.image img{
+    width: 700px;
+    height: 300px;
+}
+
+.pr_1, .pr_2{
+    display: flex;
+    justify-content: space-between;
+   padding: 20px 0;
+}
+
+ h3{
+    font-size: 26px;
+}
+.details{
+    font-size: 23px;
+}
+
+.achivements{
+    margin: 40px 0;
+}
+
+.ach_list{
+    padding: 20px;
+    font-size: 23px;
+}
+
+.ach_list .heading{
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.ach_list .uldescription{
+    font-size: 23px;
+    font-weight: 500;
+    padding: 5px;
+   
+}
